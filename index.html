@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <title>Internet y la Tecnologia en el día a día</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <div class="window">
+  <div class="icons"><span></span></div>
+  <div class="title">spacy_demo.py</div>
+  <pre class="lang-python"><code>import spacy.en
+from spacy.symbols import VERB, nsubj, dobj
+
+def find_acquisitions(nlp, text, buy_words):
+    doc = nlp(text)
+    for ent in doc.ents:
+        ent.merge(ent.root.tag_, ent.text, ent.label_)
+    buy_words = set(nlp.vocab.strings[w] for w in buy_words)
+    for token in doc:
+        if token.pos == VERB and token.lemma in buy_words:
+            buyer = [w for w in token.lefts if w.dep == nsubj]
+            bought = [w for w in token.rights if w.dep == dobj]
+            if buyer and bought:
+                yield token, buyer[0], bought[0]</code></pre>
+</div>
+</body>
