@@ -2,24 +2,62 @@
 <head>
     <title>Internet y la Tecnologia en el día a día</title>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css" type="text/css" />
 </head>
 <body>
     <div class="window">
   <div class="icons"><span></span></div>
-  <div class="title">spacy_demo.py</div>
-  <pre class="lang-python"><code>import spacy.en
-from spacy.symbols import VERB, nsubj, dobj
-
-def find_acquisitions(nlp, text, buy_words):
-    doc = nlp(text)
-    for ent in doc.ents:
-        ent.merge(ent.root.tag_, ent.text, ent.label_)
-    buy_words = set(nlp.vocab.strings[w] for w in buy_words)
-    for token in doc:
-        if token.pos == VERB and token.lemma in buy_words:
-            buyer = [w for w in token.lefts if w.dep == nsubj]
-            bought = [w for w in token.rights if w.dep == dobj]
-            if buyer and bought:
-                yield token, buyer[0], bought[0]</code></pre>
+  <div class="title">Internet y la Tecnologia en el día a día</div>
+  <pre>
+    <p>
+        El Internet y la tecnología se han vuelto parte indispensable 
+        en mi día a día.
+        <br>
+        Al despertarme lo primero que escucho es la alarma del celular, 
+        en el momento en que comienza a preparar el desayuno, entro en 
+        Youtube y comienzo a ver todos los videos que no he 
+        podido ver en el día anterior.
+        <br>
+        Salgo de mi casa directo al trabajo, el tiempo promedio que me 
+        demoro en ir desde mi casa hasta la oficina son 2 horas y para 
+        que el viaje no sea aburrido tengo una lista de canciones 
+        en Spotify, la música se ha vuelto algo indispensable 
+        al momento de salir a la calle, ya no existe día en el que no 
+        salga con los audífonos conectados al celular y mi lista de 
+        música sonando.
+        <br>
+        Yo trabajo como desarrollador FRONT END, quiere decir que mi 
+        trabajo está ligado directamente con internet, analizándolo más 
+        detenidamente mi trabajo está también ligado con la tecnología 
+        misma ya que si ella no se hubiesen inventado las laptops, 
+        los televisores, los módems que nos permiten conectarnos a internet 
+        y en teoría no tendría trabajo porque todo está ligado.
+        <br>
+        Al finalizar el día, ya muy tarde en la noche, el trayecto de la 
+        oficina a mi casa se multiplica, son 2 horas de viaje, ya sea 
+        parado o sentado nunca puede faltar mi celular con la lista de música.
+        <br>
+        Mi día a día está repleto de momentos en los que el internet y 
+        la tecnología intervienen, desde que tengo memoria, siempre he 
+        vivido viendo televisión o estando en la computadora jugando algún 
+        videojuego. He tenido momentos en los que me he querido arrancar 
+        los cabellos por el aburrimiento al no poder ver televisión o estar 
+        en la computadora, soy franco al decir que tengo una seria dependencia 
+        hacia la tecnología. 
+        <br>
+        Pero estos son aspectos que influyen directamente en mi vida, 
+        aún falta tocar aspectos del internet y la tecnología que no están 
+        siempre en mi día a día, pero que son necesarias en su momento, 
+        por ejemplo: los editores de texto como Word, vallas publicitarias 
+        eléctricas, páginas web de todo tipo, hasta el mismo moodel 
+        es necesario en este momento ya que si este no podría entregar esta 
+        tarea.
+        <br>
+        Así que, en conclusión, mi día a día, incluso mi vida laboral, 
+        no serían nada si no existiesen el internet y la tecnología, gracias 
+        a ellos pude desempeñarme en lo que me gusta y no me imagino haciendo 
+        otra cosa. 
+    </p>
+  </pre>
 </div>
 </body>
