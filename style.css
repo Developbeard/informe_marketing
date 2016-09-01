@@ -145,18 +145,20 @@ pre {
 
 pre p {
   height: 400px;
+  font: bold 1em/1.75 "Source Code Pro", monospace;
+
 }
 
-pre code {
-  font: bold 1em/1.75 "Source Code Pro", monospace;
-}
-pre code:after {
+.name:after {
   -webkit-animation: blink 0.9s infinite;
           animation: blink 0.9s infinite;
   font: initial;
-  display: block;
+  display: inline-block;
   opacity: 1;
   content: "▋";
+  padding-left: 0.5em;
+  padding-bottom: 2em;
+
 }
 
 .token.punctuation {
